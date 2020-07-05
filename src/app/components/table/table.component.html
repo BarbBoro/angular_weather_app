@@ -1,0 +1,36 @@
+<div class="container p-3 my-3">
+  <table class="table">
+    <tr>
+      <th>pocasie</th>
+      <th>datum</th>
+      <th>smer vetra</th>
+      <th>teplota</th>
+      <th>tlak vzduchu</th>
+
+      <th>viditelnost</th>
+      <th>predikcia</th>
+    </tr>
+
+    <tr *ngFor="let weather of items$ | slice: 0:10">
+      <td>{{ weather.weather_state_name }}</td>
+      <td>{{ weather.applicable_date }}</td>
+      <td>{{ weather.wind_direction_compass }}</td>
+      <td>{{ weather.the_temp }}</td>
+      <td>{{ weather.air_pressure }}</td>
+
+      <td>{{ weather.visibility }}</td>
+      <td>{{ weather.predictability }}</td>
+    </tr>
+  </table>
+
+  <!--<table >
+     <p>{{ weather.weather_state_name }}</p>
+    <tr>
+      <td>{{ weather.weather_state_name }}</td>
+    </tr>
+    <tr>
+      <td>{{ weather.applicable_date }}</td>
+    </tr>
+
+  </table>-->
+</div>
